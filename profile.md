@@ -8,7 +8,7 @@ Hola, me llamo Fernando Navajas y Soy un programador, actualmente este sitio es 
 
 
 ### 1. Ir a otros sitios de la pagina
-[Link para ir a los post]({% link index.markdown%})
+[Link para ir a los post](/my-blog{% link index.markdown%})
 
 ### 2 .renderizar contenido dependiendo de una variable
 {% if page.show_sidebar %}
