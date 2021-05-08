@@ -1,6 +1,4 @@
-- name: Blog
-  link: /
-- name: About
-  link: /about
 - name: Perfil
-  link: /profile
+  link: /
+- name: Post
+  link: /posts

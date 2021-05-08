@@ -1,6 +1,7 @@
 ---
 layout: post
 title:  "Como crear una página web en Github con Jekyll"
+author: Fernando Navajas
 date:   2021-04-24 19:04:30 -0400
 permalink: /:title
 categories: jekyll

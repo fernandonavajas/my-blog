@@ -1,7 +1,6 @@
 ---
 layout: default
 title: Perfil
-permalink: /profile
 show_sidebar: true
 ---
 
@@ -9,7 +8,7 @@ Hola, me llamo Fernando Navajas y Soy un programador, actualmente este sitio es 
 
 
 ### 1. Ir a otros sitios de la pagina
-[Link para ir a los post](/my-blog{% link index.markdown%})
+[Link para ir a los post](/my-blog{% link posts.html%})
 
 ### 2 .renderizar contenido dependiendo de una variable
 {% if page.show_sidebar %}
