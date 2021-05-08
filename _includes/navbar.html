@@ -9,7 +9,11 @@
         <li class="nav-item">
           <a class="nav-link"
              href="/my-blog{{ item.link }}">
-            {{ item.name }}
+            <span {% if page.url == item.link %}
+                class="current-url"
+              {% endif %} >
+              {{ item.name }}
+            </span>
           </a>
         </li>
       {% endfor %}
