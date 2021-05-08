@@ -1,8 +1,18 @@
-<nav>
-  {% for item in site.data.navbar %}
-    <a href="/my-blog{{ item.link }}" 
-        {% if page.url == item.link %}class="current-url"{% endif %}>
-      {{ item.name }}
-    </a>
-  {% endfor %}
+<nav class="navbar navbar-expand-md navbar-dark bg-primary">
+  <a class="navbar-brand" href="#">Fernando</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+      {% for item in site.data.navbar %}
+        <li class="nav-item">
+          <a class="nav-link"
+             href="/my-blog{{ item.link }}">
+            {{ item.name }}
+          </a>
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
 </nav>
