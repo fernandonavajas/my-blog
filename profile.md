@@ -1,6 +1,7 @@
 ---
-layout: profile
+layout: default
 title: Perfil
+permalink: /profile
 show_sidebar: true
 ---
 
