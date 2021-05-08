@@ -1,8 +1,8 @@
 <nav>
-  <nav>
-    {% for item in site.data.navbar %}
-      <a href="/my-blog{{ item.link }}" {% if page.url == item.link %}style="color: red;"{% endif %}>
-        {{ item.name }}
-      </a>
-    {% endfor %}
-  </nav>
+  {% for item in site.data.navbar %}
+    <a href="/my-blog{{ item.link }}" 
+        {% if page.url == item.link %}class="current-url"{% endif %}>
+      {{ item.name }}
+    </a>
+  {% endfor %}
+</nav>
