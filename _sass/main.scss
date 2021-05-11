@@ -1,3 +1,23 @@
 .current-url {
   color: white;
 }
+
+body{ min-height:100vh; margin:0; position:relative; }
+header{ min-height:50px; background:lightcyan; }
+footer{ background:PapayaWhip; }
+
+body {
+  position: relative;
+}
+
+body::after {
+  content: '';
+  display: block;
+  height: 100px; /* Set same as footer's height */
+}
+.always-bottom-page {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 100px;
+}
