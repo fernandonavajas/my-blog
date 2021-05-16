@@ -3,13 +3,20 @@ layout: default
 title: Blog
 permalink: /posts
 ---
-<h1>Latest Posts</h1>
 
-<ul>
-  {% for post in site.posts %}
-    <li>
-      <h2><a href="/my-blog{{ post.url }}">{{ post.title }}</a></h2>
-      {{ post.excerpt | truncate: 156 }}
-    </li>
-  {% endfor %}
-</ul>
+<h1 class="py-2 px-3">Últimos Posts</h1>
+
+{% for post in site.posts %}
+  <div class="card mx-3 ">
+    <div class="card-header  text-center">
+      {{ post.title }}
+    </div>
+    <div class="card-body">
+      <p class="card-text">{{ post.excerpt | truncate: 156 }}</p>
+      <a href="/my-blog{{ post.url }}" class="btn btn-primary float-right">Ver Post</a>
+    </div>
+    <div class="card-footer text-muted text-center">
+      {{ post.date | date: "%d/%m/%Y" }}
+    </div>
+  </div>
+{% endfor %}
