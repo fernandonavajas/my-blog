@@ -4,18 +4,13 @@ title: Perfil
 show_sidebar: true
 ---
 
-<div class="row m-2">
-  <div class="card card-profile border-primary col-md-4 m-1 p-0">
-  <img class="card-img-top" src="assets/images/perfil.jpg" alt="Card image cap">
-    <div class="card-body">
-      <h5 class="card-title">26 años</h5>
-      <p class="card-text "> Hola, soy Fernando Navajas,
-        amante de la construcción, me encanta tener un proyecto
-        en mente e ir desarrollandolo en mis días libres. Esta página
-        es obra de esa motivación.
-        La colaboración es la clave para el éxito.
-      </p>
-    </div>
+<div class="d-flex" style="flex-wrap: wrap;">
+  <div class="col-md-4">
+    {% include profile-info.html %}
   </div>
-  {% include profile-jobs.html %}
+  <div class="col-md-8">
+    {% include profile-jobs.html %}
+    {% include profile-hobbies.html %}
+  </div>
 </div>
+
