@@ -26,9 +26,13 @@ body::after {
 }
 
 .card-profile {
-  max-width: 18rem;
 }
 .card-jobs {
   width: 100%;
   height: fit-content;
+}
+
+.certification {
+  max-width: 100px;
+  max-height: 100px;
 }
