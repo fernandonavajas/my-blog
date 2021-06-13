@@ -22,14 +22,8 @@ body::after {
 }
 
 .page-footer{
-  background: #0A79FB;
-}
-
-.card-profile {
-}
-.card-jobs {
-  width: 100%;
-  height: fit-content;
+  padding-top: 16px;
+  background: #307280;
 }
 
 .certification {
@@ -40,4 +34,32 @@ body::after {
 .img-hobbies {
   max-width: 400px;
   max-height: 400px;
+}
+
+.card {
+  padding: 0px;
+  margin-top: 8px;
+  border: 1px solid rgba(42, 45, 51, 0.6) !important;
+
+  &-profile {
+    color: #dfe0d4;
+    background-color: #3e92a3 !important;
+  }
+  &-jobs {
+    width: 100%;
+    height: fit-content;
+    color: #3e92a3
+  }
+  &-hobbies{
+    color: #52a33e
+  }
+  .card-header {
+    color: #dfe0d4;
+    &_jobs{
+      background-color: #3e92a3 !important;
+    }
+    &_hobbies{
+      background-color: #52a33e !important;
+    }
+  }
 }
