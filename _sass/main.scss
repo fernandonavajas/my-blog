@@ -67,10 +67,18 @@ body::after {
   &-jobs {
     width: 100%;
     height: fit-content;
-    color: #3e92a3
+    color: #3e92a3;
+
+    .card-body {
+      color: gray;
+    }
   }
   &-hobbies{
-    color: #52a33e
+    color: #52a33e;
+
+    .card-body {
+      color: gray;
+    }
   }
   .card-header {
     color: #dfe0d4;
