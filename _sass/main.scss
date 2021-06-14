@@ -60,6 +60,17 @@ body::after {
   margin-top: 8px;
   border: 1px solid rgba(42, 45, 51, 0.6) !important;
 
+  &-post {
+    background-color: transparent !important;
+    border: 1px solid rgba(62, 146, 163, 0.6) !important;
+    margin-left: 12px;
+    margin-right: 12px;
+
+    .card-header, .card-footer {
+      text-align: center;
+      background-color: #3e92a3 !important;
+    }
+  }
   &-profile {
     color: #dfe0d4;
     background-color: #3e92a3 !important;
@@ -96,4 +107,30 @@ body::after {
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
+}
+
+.post{
+  .ajust-post {
+    margin-right: auto;
+    margin-left: auto;
+  }
+  .content{
+    margin-top: 50px;
+    a{
+      color: #3e92a3;
+    }
+  }
+
+  .header {
+    margin-top: 30px;
+    .author {
+      font-weight: 100;
+      color: #52a33e;
+    }
+  
+    .date {
+      float: right;
+    }
+  }
+
 }

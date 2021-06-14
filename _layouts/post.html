@@ -1,7 +1,25 @@
 ---
 layout: default
 ---
-<h1>{{ page.title }}</h1>
-<p>{{ page.date | date: "%d/%m/%Y" }} - {{ page.author }}</p>
-
-{{ content }}
+<div class="post">
+  <div class="container">
+    <div class="row">
+      <div class="ajust-post col-lg-8 col-md-10">
+        <div class="header">
+          <h1>{{ page.title }}</h1>
+          <span class="author">{{ page.author }}</span>
+          <span class="date">{{ page.date | date: "%d/%m/%Y" }}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="ajust-post content col-lg-8 col-md-10">
+  
+        {{ content }}
+  
+      </div>
+    </div>
+  </div>
+</div>

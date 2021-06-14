@@ -7,15 +7,15 @@ permalink: /posts
 <h1 class="py-2 px-3">Últimos Posts</h1>
 
 {% for post in site.posts %}
-  <div class="card mx-3 border-primary">
-    <div class="card-header bg-primary text-white text-center">
+  <div class="card card-post">
+    <div class="card-header">
       {{ post.title }}
     </div>
     <div class="card-body">
-      <p class="card-text">{{ post.excerpt | truncate: 156 }}</p>
+      <p class="card-text">{{ post.excerpt | truncate: 200 }}</p>
       <a href="/my-blog{{ post.url }}" class="btn btn-success float-right">Ver Post</a>
     </div>
-    <div class="card-footer text-white bg-primary text-center">
+    <div class="card-footer">
       {{ post.date | date: "%d/%m/%Y" }}
     </div>
   </div>
