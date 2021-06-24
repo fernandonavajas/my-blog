@@ -57,6 +57,13 @@ body::after {
   object-fit: cover;
 }
 
+.posts-title {
+  padding-top: 18px;
+  padding-bottom: 8px;
+  padding-left: 12px;
+  padding-right: 12px;
+}
+
 .card {
   padding: 0px;
   margin-top: 8px;
@@ -67,10 +74,13 @@ body::after {
     border: 1px solid rgba(62, 146, 163, 0.6) !important;
     margin-left: 12px;
     margin-right: 12px;
+    margin-bottom: 30px;
 
     .card-header, .card-footer {
       text-align: center;
       background-color: #3e92a3 !important;
+      font-weight: 600;
+      font-size: 18px;
     }
   }
   &-profile {
