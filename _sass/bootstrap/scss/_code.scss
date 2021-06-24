@@ -40,6 +40,10 @@ pre {
   display: block;
   font-size: $code-font-size;
   color: $pre-color;
+  background-color: $gray-500;
+  border-radius: 3px;
+  padding-left: 10px;
+  padding-right: 10px;
 
   // Account for some code outputs that place code tags in pre tags
   code {
