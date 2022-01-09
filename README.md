@@ -1,9 +1,16 @@
-# .github.io
-Blog profesional
+Portafolio
 
-https://fernandonavajas.github.io/my-blog/
+Esta levantado en el sitio: **fernandonavajas.cl**
+# Configurar el proyecto localmente
 
+1. Instalar Ruby
 
-# Ejecutar servidor localmente
+        rbenv install
 
-bundle exec jekyll serve --livereload
+2. Instalar las gemas necesarias
+
+        bundle install
+
+3. Ejecutar servidor localmente
+
+        bundle exec jekyll serve --livereload
