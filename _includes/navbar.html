@@ -1,5 +1,5 @@
 <nav class="navbar navbar-expand-md navbar-custom">
-  <a class="navbar-brand" href="/my-blog/">Fernando</a>
+  <a class="navbar-brand" href="/">Fernando</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"><span class="burger-menu">≡</span></span>
   </button>
@@ -8,7 +8,7 @@
       {% for item in site.data.navbar %}
         <li class="nav-item">
           <a class="nav-link"
-             href="/my-blog{{ item.link }}">
+             href="{{ item.link }}">
             <span {% if page.url == item.link %}
                 class="current-url"
               {% endif %} >

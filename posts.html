@@ -13,7 +13,7 @@ permalink: /posts
     </div>
     <div class="card-body">
       <p class="card-text">{{ post.excerpt | truncate: 200 }}</p>
-      <a href="/my-blog{{ post.url }}" class="btn btn-success float-right">Ver Post</a>
+      <a href="{{ post.url }}" class="btn btn-success float-right">Ver Post</a>
     </div>
     <div class="card-footer">
       {{ post.date | date: "%d/%m/%Y" }}
