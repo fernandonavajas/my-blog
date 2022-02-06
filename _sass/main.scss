@@ -63,6 +63,12 @@ body::after {
   object-fit: cover;
 }
 
+.img-projects {
+  max-width: 600px !important;
+  max-height: 400px;
+  object-fit: cover;
+}
+
 .posts-title {
   padding-top: 18px;
   padding-bottom: 8px;
@@ -109,6 +115,13 @@ body::after {
       color: gray;
     }
   }
+  &-projects{
+    color: #b9b13c;
+
+    .card-body {
+      color: gray;
+    }
+  }
   .card-header {
     color: #dfe0d4;
     &_jobs{
@@ -116,6 +129,9 @@ body::after {
     }
     &_hobbies{
       background-color: #52a33e !important;
+    }
+    &_projects{
+      background-color: #b9b13c !important;
     }
   }
 }
