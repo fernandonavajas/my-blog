@@ -1,0 +1,18 @@
+name: Bloquear fusión de PR hasta cierta hora
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened]
+
+jobs:
+  merge:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Esperar hasta hora definida
+      uses: distributhor/wait-for-time@v1.0
+      with:
+        time: "11:30:00"
+        timezone: "America/Santiago"
+    - name: Desbloquear PR
+      run: |
+        echo "PR desbloqueado"
