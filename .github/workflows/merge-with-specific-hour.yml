@@ -3,18 +3,17 @@ name: Bloquear Pre Release hasta las 8 PM en Chile
 on:
   pull_request:
     types: [opened, synchronize, reopened]
-    branches:
-      - 'pre-release-2023-01-02'
 
 jobs:
   merge:
+    if: ${startsWith(github.event.pull_request.title, 'Pre-release-2023')}
     runs-on: ubuntu-latest
     steps:
     - name: Esperar hasta hora definida
       run: |
           echo "PR bloqueado hasta las 8pm CL"
           current_epoch=$(TZ=America/Santiago date +%s)
-          target_epoch=$(TZ=America/Santiago date -d "17:05:00" +%s)
+          target_epoch=$(TZ=America/Santiago date -d "17:13:00" +%s)
           echo $current_epoch
           echo $target_epoch
 
