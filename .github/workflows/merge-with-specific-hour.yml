@@ -6,7 +6,7 @@ on:
 
 jobs:
   merge:
-    if: ${startsWith(github.event.pull_request.title, 'Pre-release-2023')}
+    if: ${{ startsWith(github.event.pull_request.title, 'Pre-release-2023') }}
     runs-on: ubuntu-latest
     steps:
     - name: Esperar hasta hora definida
