@@ -13,14 +13,11 @@ jobs:
       run: |
           echo "PR bloqueado hasta las 8pm CL"
           current_epoch=$(TZ=America/Santiago date +%s)
-          target_epoch=$(TZ=America/Santiago date -d "17:13:00" +%s)
-          echo $current_epoch
-          echo $target_epoch
-
+          target_epoch=$(TZ=America/Santiago date -d "17:18:00" +%s)
           sleep_seconds=$(( $target_epoch - $current_epoch ))
-          echo $sleep_seconds
-
-          sleep $sleep_seconds
+          if sleep_seconds > 0
+            sleep $sleep_seconds
+          fi
     - name: Desbloquear PR
       run: |
         echo "PR desbloqueado"
