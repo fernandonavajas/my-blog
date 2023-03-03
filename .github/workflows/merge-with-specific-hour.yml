@@ -1,0 +1,23 @@
+name: Bloquear Pre Release hasta las 8 PM en Chile
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened]
+
+jobs:
+  merge:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Esperar hasta hora definida
+      run: |
+          echo "PR bloqueado hasta las 8pm CL"
+          current_epoch=$(date +%s)
+          target_epoch=$(date -d "11:05:00" +%s)
+
+          sleep_seconds=$(( $target_epoch - $current_epoch ))
+
+          sleep $sleep_seconds
+    - name: Desbloquear PR
+      run: |
+        echo "PR desbloqueado"
+       
