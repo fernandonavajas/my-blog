@@ -3,6 +3,8 @@ name: Bloquear Pre Release hasta las 8 PM en Chile
 on:
   pull_request:
     types: [opened, synchronize, reopened]
+    branches:
+      - 'pre-release-2023*'
 
 jobs:
   merge:
@@ -12,7 +14,7 @@ jobs:
       run: |
           echo "PR bloqueado hasta las 8pm CL"
           current_epoch=$(TZ=America/Santiago date +%s)
-          target_epoch=$(TZ=America/Santiago date -d "11:20:00" +%s)
+          target_epoch=$(TZ=America/Santiago date -d "17:00:00" +%s)
           echo $current_epoch
           echo $target_epoch
 
