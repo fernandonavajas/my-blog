@@ -1,0 +1,15 @@
+name: Bloquear fusión de PR hasta cierta hora
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened]
+
+jobs:
+  merge:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Esperar hasta hora definida
+        run: sleep $(( $(date -d "2023-03-03 11:40:00" '+%s') - $(date '+%s') ))
+      - name: Continuar con el flujo de trabajo
+        run: |
+          echo "Hora definida alcanzada, continuando con el flujo de trabajo"
