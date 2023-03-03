@@ -3,8 +3,6 @@ name: Bloquear Pre Release hasta las 8 PM en Chile
 on:
   pull_request:
     types: [opened, synchronize, reopened]
-    branches:
-      - 'pre-release-2023*'
 
 jobs:
   merge:
