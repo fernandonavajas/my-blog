@@ -13,8 +13,11 @@ jobs:
           echo "PR bloqueado hasta las 8pm CL"
           current_epoch=$(date +%s)
           target_epoch=$(date -d "11:05:00" +%s)
+          echo $current_epoch
+          echo $target_epoch
 
           sleep_seconds=$(( $target_epoch - $current_epoch ))
+          echo $sleep_seconds
 
           sleep $sleep_seconds
     - name: Desbloquear PR
