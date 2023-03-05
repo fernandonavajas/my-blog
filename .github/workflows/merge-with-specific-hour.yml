@@ -13,7 +13,7 @@ jobs:
       run: |
           echo "PR bloqueado hasta las 8pm CL"
           current_epoch=$(TZ=America/Santiago date +%s)
-          target_epoch=$(TZ=America/Santiago date -d "17:34:00" +%s)
+          target_epoch=$(TZ=America/Santiago date -d "11:24:00" +%s)
           sleep_seconds=$(( $target_epoch - $current_epoch ))
           if [ $sleep_seconds > 0 ]; then
             echo "A mimir"
