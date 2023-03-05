@@ -6,19 +6,20 @@ on:
 
 jobs:
   merge:
-    if: ${{ startsWith(github.event.pull_request.title, 'Pre-release-2023') }}
+    if: ${{ startsWith(github.event.pull_request.title, 'Pre release 2023') }}
     runs-on: ubuntu-latest
     steps:
     - name: Esperar hasta hora definida
       run: |
           echo "PR bloqueado hasta las 8pm CL"
           current_epoch=$(TZ=America/Santiago date +%s)
-          target_epoch=$(TZ=America/Santiago date -d "17:30:00" +%s)
+          target_epoch=$(TZ=America/Santiago date -d "17:34:00" +%s)
           sleep_seconds=$(( $target_epoch - $current_epoch ))
-          if $sleep_seconds > 0
-          then
+          if [ $sleep_seconds > 0 ]; then
+            echo "A mimir"
             sleep $sleep_seconds
           fi
+         
     - name: Desbloquear PR
       run: |
         echo "PR desbloqueado"
