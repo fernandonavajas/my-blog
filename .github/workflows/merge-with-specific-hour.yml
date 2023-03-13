@@ -6,7 +6,7 @@ on:
 
 jobs:
   bloquear-pre-release-hasta-las-8pm:
-    if: ${{ startsWith(github.event.pull_request.title, 'Pre release 2023') }}
+    if: ${{ startsWith(github.event.pull_request.title, 'Pre release') }}
     runs-on: ubuntu-latest
     steps:
     - name: Esperar hasta hora definida
