@@ -2,10 +2,10 @@ name: Bloquear Pre Release hasta las 8 PM en Chile
 
 on:
   pull_request:
-    types: [closed]
+    types: [opened, synchronize, reopened]
 
 jobs:
-  merge:
+  bloquear-pre-release-hasta-las-8pm:
     if: ${{ startsWith(github.event.pull_request.title, 'Pre release 2023') }}
     runs-on: ubuntu-latest
     steps:
