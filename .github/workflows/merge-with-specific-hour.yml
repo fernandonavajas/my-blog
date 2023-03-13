@@ -2,7 +2,7 @@ name: Bloquear Pre Release hasta las 8 PM en Chile
 
 on:
   pull_request:
-    types: [opened, synchronize, reopened]
+    types: [opened, synchronize, reopened, ready_for_review]
 
 jobs:
   merge:
@@ -11,12 +11,13 @@ jobs:
     steps:
     - name: Esperar hasta hora definida
       run: |
-          echo "PR bloqueado hasta las 8pm CL"
           current_epoch=$(TZ=America/Santiago date +%s)
-          target_epoch=$(TZ=America/Santiago date -d "11:48:00" +%s)
+          target_epoch=$(TZ=America/Santiago date -d "10:01:00" +%s)
           sleep_seconds=$(( $target_epoch - $current_epoch ))
           if [ $sleep_seconds > 0 ]; then
-            sleep $sleep_seconds
+            exit 1
+          else
+            echo "PR desbloqueado "
           fi
          
     - name: Desbloquear PR
