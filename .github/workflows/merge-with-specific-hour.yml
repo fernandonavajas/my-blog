@@ -12,7 +12,7 @@ jobs:
     - name: Esperar hasta hora definida
       run: |
           current_epoch=$(TZ=America/Santiago date +%s)
-          target_epoch=$(TZ=America/Santiago date -d "10:11:00" +%s)
+          target_epoch=$(TZ=America/Santiago date -d "10:46:00" +%s)
           sleep_seconds=$(( $target_epoch - $current_epoch ))
           if [ $sleep_seconds > 0 ]; then
             sleep $sleep_seconds
